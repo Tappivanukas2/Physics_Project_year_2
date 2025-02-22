@@ -127,6 +127,18 @@ st.pyplot(fig)
 
 plt.savefig('PSD.png')
 plt.show()
+
+st.write("Logarithmic version")
+fig, ax = plt.subplots(figsize=(10, 10))
+plt.semilogy(frequencies, PSD_values)
+ax.plot(frequencies, PSD_values, label='Z')
+plt.xlabel('Frequency (Hz)')
+plt.ylabel('PSD (m^2/s^3)')
+ax.grid()
+st.pyplot(fig)
+
+plt.savefig('PSD.png')
+plt.show()
 st.write("PSD saved to PSD.png")
 #PSD end
 
