@@ -118,7 +118,7 @@ nperseg = 256
 frequencies, PSD_values = welch(PSD_z_data, fs=sampling_frequency, nperseg=nperseg)
 
 fig, ax = plt.subplots(figsize=(10, 10))
-plt.semilogy(frequencies, PSD_values)
+#plt.semilogy(frequencies, PSD_values)
 ax.plot(frequencies, PSD_values, label='Z')
 plt.xlabel('Frequency (Hz)')
 plt.ylabel('PSD (m^2/s^3)')
